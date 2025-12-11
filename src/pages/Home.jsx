@@ -7,14 +7,14 @@ import PHP from "../assets/PHP.png";
 
 export default function Home() {
   const techStack = [
-    { name: "React", logo: { React } },
-    { name: "Laravel", logo: { Laravel } },
-    { name: "Tailwind", logo: { Tailwind } },
-    { name: "PHP", logo: { PHP } },
+    { name: "React", logo: React },
+    { name: "Laravel", logo: Laravel },
+    { name: "Tailwind", logo: Tailwind },
+    { name: "PHP", logo: PHP },
   ];
   return (
-    <div className="text-white h-screen flex flex-col items-center ">
-      <div className="profile flex flex-col items-center mt-30 ">
+    <div className="text-white h-screen flex flex-col items-center">
+      <div className="profile flex flex-col items-center mt-10 ">
         <img
           src={profile}
           alt="Profile Pic"
@@ -24,10 +24,40 @@ export default function Home() {
         <h5 className="text-sm sm:text-lg font-normal">
           Full Stack Developer Specializing in React and Laravel
         </h5>
+
+        <div className="tech-stack-title mt-10 flex flex-col items-center">
+          <h2 className="text-2xl font-bold">Tech Stack</h2>
+          <div className="flex justify-center gap-10">
+            {techStack.map((tech) => (
+              <div key={tech.name}>
+                <img
+                  src={tech.logo}
+                  alt={tech.name}
+                  className="w-15 h-15 mt-5"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div className="tech-stack-title mt-10">
-        <h2 className="text-2xl">Core Technologies</h2>
+      <div className="about text-justify p-6 mt-10">
+        <h2 className="text-2xl text-center mb-5 font-bold">About Me</h2>
+        <p>
+          I am Lemuel Tadeo, a dedicated Full Stack Developer specializing in
+          modern web application development. My focus is on creating smooth,
+          user-friendly digital experiences. I use React and Tailwind CSS for
+          clean, responsive front-ends, and I build powerful, reliable back-ends
+          using Laravel and PHP. I enjoy taking a project from an initial idea
+          all the way to a finished, scalable application. I am passionate about
+          writing code that is easy to read, maintain, and expand. I am always
+          looking for new ways to solve complex challenges and deliver
+          high-quality results.
+        </p>
+      </div>
+
+      <div className="projects mt-10">
+        <h2 className="text-2xl text-center mb-5 font-bold">Projects</h2>
       </div>
     </div>
   );
