@@ -1,13 +1,13 @@
-import { Links } from "react-router-dom";
 import profile from "../assets/profile.JPG";
-import React from "../assets/React.png";
+import ReactLogo from "../assets/React.png";
 import Laravel from "../assets/Laravel.png";
 import Tailwind from "../assets/Tailwind.png";
 import PHP from "../assets/PHP.png";
+import ScreenShotSlider from "../components/ScreenShotSlider";
 
 export default function Home() {
   const techStack = [
-    { name: "React", logo: React },
+    { name: "React", logo: ReactLogo },
     { name: "Laravel", logo: Laravel },
     { name: "Tailwind", logo: Tailwind },
     { name: "PHP", logo: PHP },
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="about text-justify p-6 mt-10">
+      <div className="about text-justify p-8 mt-5">
         <h2 className="text-2xl text-center mb-5 font-bold">About Me</h2>
         <p>
           I am Lemuel Tadeo, a dedicated Full Stack Developer specializing in
@@ -56,9 +56,21 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="projects mt-10">
+      <div className="projects mt-5 text-center">
         <h2 className="text-2xl text-center mb-5 font-bold">Projects</h2>
+        <p className="font-bold ">
+          Guidance Couseling Appointment Scheduling With Descriptive Analytics
+        </p>
+        <p className="text-justify pl-8 pr-8 mt-3">
+          The Guidance Counseling Appointment Scheduling with Descriptive
+          Analytics is a web-based system that helps students book, change, or
+          cancel guidance counseling appointments online. Guidance counselors
+          can manage schedules and student records easily. The system also shows
+          simple reports about appointments and counseling activities to help
+          counselors understand student needs and improve their services.
+        </p>
       </div>
+      <ScreenShotSlider />
     </div>
   );
 }
